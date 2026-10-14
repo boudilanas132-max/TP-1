@@ -1,4 +1,3 @@
-```java
 package com.example;
 
 import com.example.model.Produit;
@@ -94,4 +93,4 @@ public class App {
         }
     }
 }
-```
+
