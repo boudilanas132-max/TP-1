@@ -1,3 +1,4 @@
+
 package com.example.model;
 
 import javax.persistence.Entity;
@@ -16,46 +17,44 @@ public class Produit {
     private String nom;
     private BigDecimal prix;
 
-    // Constructeur par défaut requis par JPA
+    // Constructeur sans parametres utilise par JPA
     public Produit() {
     }
 
+    // Initialise un produit avec son nom et son prix
     public Produit(String nom, BigDecimal prix) {
         this.nom = nom;
         this.prix = prix;
     }
 
-    // Getters et Setters
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long nouvelId) {
+        this.id = nouvelId;
     }
 
     public String getNom() {
         return nom;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNom(String nouveauNom) {
+        this.nom = nouveauNom;
     }
 
     public BigDecimal getPrix() {
         return prix;
     }
 
-    public void setPrix(BigDecimal prix) {
-        this.prix = prix;
+    public void setPrix(BigDecimal nouveauPrix) {
+        this.prix = nouveauPrix;
     }
 
     @Override
     public String toString() {
-        return "Produit{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", prix=" + prix +
-                '}';
+        return "Produit [id=" + id
+                + ", nom=" + nom
+                + ", prix=" + prix + "]";
     }
 }
